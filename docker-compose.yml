@@ -1,0 +1,24 @@
+web:
+  build: .
+  ports:
+   - "80:80"
+   - "443:443"
+  volumes:
+   - ./vhosts:/bitnami/apache/conf/vhosts
+  links:
+   - omni1MS
+   - omni2MS
+   - securityMS
+omni1MS:
+  image: nosolojava/omnisession-ms
+  expose:
+   - "8080"
+
+omni2MS:
+  image: nosolojava/omnisession-ms
+  expose:
+   - "8080"
+securityMS:
+  image: nosolojava/security-ms
+  expose:
+   - "8080"
