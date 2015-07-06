@@ -13,12 +13,12 @@ COPY . /src
 WORKDIR /src
 
 # install npm basic dependencies
-RUN npm install -g yo
-RUN npm install -g generator-angular-fullstack
-RUN npm install -g grunt
-RUN npm install -g grunt-cli
-RUN npm install -g bower
-RUN gem install sass
+# RUN npm install -g yo
+# RUN npm install -g generator-angular-fullstack
+# RUN npm install -g grunt
+# RUN npm install -g grunt-cli
+# RUN npm install -g bower
+# RUN gem install sass
 
 RUN npm install && bower install && grunt
 
