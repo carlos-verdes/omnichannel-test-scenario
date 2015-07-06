@@ -4,8 +4,11 @@ FROM bitnami/apache
 # Enable EPEL for Node.js
 RUN     rpm -Uvh http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
 
-# Install Node.js and npm
-RUN     yum install -y npm
+# Install Node.js, npm and ruby
+RUN apt-get update
+RUN apt-get install nodejs
+RUN apt-get install npm
+RUN apt-get install ruby-full
 
 # Bundle app source
 COPY . /src
