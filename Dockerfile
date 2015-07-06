@@ -3,9 +3,9 @@ FROM bitnami/apache
 
 # Install Node.js, npm and ruby
 RUN apt-get update
-RUN apt-get install nodejs
-RUN apt-get install npm
-RUN apt-get install ruby-full 
+RUN apt-get install -y nodejs
+RUN apt-get install -y npm
+RUN apt-get install -y ruby-full 
 
 # Bundle app source
 COPY . /src
