@@ -7,8 +7,8 @@ COPY . /src
 WORKDIR /src
 
 RUN npm install 
-#RUN bower install
-#RUN grunt
+RUN bower install
+RUN grunt
 
 # the static content is mapped in the docker-compose.yml
 #   volumes:
