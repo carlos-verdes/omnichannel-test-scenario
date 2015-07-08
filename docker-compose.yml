@@ -5,7 +5,6 @@ web:
    - "443:443"
   volumes:
    - ./vhosts:/bitnami/apache/conf/vhosts
-   - ./dist/public:/app
   links:
    - omni1MS
    - omni2MS

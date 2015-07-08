@@ -27,6 +27,9 @@ RUN npm install
 RUN bower install
 RUN grunt
 
+RUN cp -a /opt/app/dist/public/* /app/
+
+
 # the static content is mapped in the docker-compose.yml
 #   volumes:
 #   - ./vhosts:/bitnami/apache/conf/vhosts
